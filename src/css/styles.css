@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+
+:root{
+    /* Primary */
+    --blue: hsl(223, 87%, 63%);
+
+    /* Secondary */
+    --pale-blue: hsl(223, 100%, 88%);
+    --light-red: hsl(354, 100%, 66%);
+
+    /* Neutral */
+    --gray: hsl(0, 0%, 59%);
+    --very-dark-blue: hsl(209, 33%, 12%);
+
+    /* Font */
+    --font-size: 20px;
+    --family: 'Libre Franklin';
+
+    /* Container */
+    --mobile-container: 375px;
+    --desktop-container: 1440px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--family);
+    font-size: var(--font-size);
+}
+
+.container {
+    width: 100%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    font-weight: 300;
+}
+
+h1 {
+    font-weight: 300;
+    color: var(--gray);
+    margin: 50px 0 20px 0;
+}
+
+.title span {
+    font-weight: 700;
+    color: var(--very-dark-blue);
+}
+
+.header {
+    margin-top: 30px;
+}
+
+.input-field {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    padding: 25px 0;
+}
+
+.input-field .input {
+    min-width: 400px;
+    /* height: 60px; */
+    margin: 5px 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-field .input input {
+    box-sizing: border-box;
+    height: 50px;
+    width: 100%;
+    padding-left: 30px;
+    border-radius: 50px;
+    border: 1px solid var(--pale-blue);
+    outline: none;
+    font-size: 16px;
+}
+
+.input-field input::placeholder {
+    color: var(--pale-blue);
+    font-size: 1em;
+}
+
+.input-field input:hover::placeholder,
+.input-field input:focus::placeholder {
+    opacity: .5;
+}
+
+.btn-submit {
+    border-radius: 50px;
+    min-width: 200px;
+    height: 50px;
+    margin: 5px 10px;
+    color: white;
+    background-color: var(--blue);
+    border: 1px solid var(--blue);
+    box-shadow: 1px 3px 7px var(--pale-blue);
+    cursor: pointer;
+    transition: transform .3s ease-in-out;
+}
+
+.btn-submit:hover {
+    background-color: white;
+    color: var(--blue);
+}
+
+.btn-submit:active {
+    transform: translateY(-5px);
+}
+
+.image {
+    margin: 50px 0;
+    padding: 0 20px;
+}
+
+.image img {
+    max-width: 700px;
+    width: 100%;
+    height: auto;
+}
+
+.social-links {
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    list-style: none;
+}
+
+.social-links .social-links-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    border-radius: 50%;
+    border: 1px solid var(--pale-blue);
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+}
+
+.social-links .social-links-item:hover {
+    background-color: var(--blue);
+}
+
+.social-links .social-links-item:hover a{
+    color: white;
+}
+
+.social-links .social-links-item a {
+    color: var(--blue);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.copyright {
+    font-size: 16px;
+    text-align: center;
+}
+
+.copyright p {
+    color: var(--gray);
+}
+
+/* Check Email */
+
+.email-error {
+    display: none;
+    color: var(--light-red);
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+@media (max-width: 660px) {
+
+    body {
+        font-size: 16px;
+    }
+
+    .header {
+        margin-top: 50px;
+    }
+
+    .btn-submit {
+        width: 100%;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    .input-field .input {
+        width: 100%;
+        min-width: 0;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    .input-field input::placeholder {
+        font-size: 16px;
+    }
+
+}
+
+@media (max-width: 376px) {
+
+    body {
+        font-size: 12px;
+    }
+
+    .input-field .input, .btn-submit {
+        width: 100%;
+        margin-left: 30px;
+        margin-right: 30px;
+        height: 40px;
+    }
+
+    .input-field input::placeholder {
+        font-size: 12px;
+    }
+}
